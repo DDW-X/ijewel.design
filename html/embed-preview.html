@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Embedded Preview - iJewel Design</title>
+    <meta name="description" content="Embedded 3D Jewelry Designs Preview" />
+    <meta property="og:title" content="Embedded Preview - iJewel Design" />
+    <meta property="og:description" content="Embedded 3D Jewelry Designs Preview" />
+    <meta name="keywords" content="3D Jewelry Designs, Embedded Viewer, iJewel Design" />
+    <meta property="og:image" content="/images/3dconfigurator.webp" />
+  
+<style id="ddwx-watermark-styles">
+  .ddwx-watermark {
+    position: fixed;
+    bottom: 18px;
+    right: 20px;
+    z-index: 999999;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 9999px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #4a4a4a;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease-in-out;
+    pointer-events: auto;
+  }
+  .ddwx-watermark:hover {
+    background: rgba(17, 24, 39, 0.9);
+    color: #ffffff;
+    border-color: rgba(17, 24, 39, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  .ddwx-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+  }
+</style>
+
+</head>
+  <body style="margin: 0; padding: 0; box-sizing: border-box">
+    <div class="iframe-wrapper">
+      <iframe
+        id="viewerFrame"
+        allow="autoplay; fullscreen; xr-spatial-tracking; web-share"
+        xr-spatial-tracking
+        execution-while-out-of-viewport
+        execution-while-not-rendered
+        web-share
+      ></iframe>
+    </div>
+
+    <style>
+      .iframe-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100dvh;
+        overflow: auto;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const slug = urlParams.get('slug');
+      const allParams = Object.fromEntries(urlParams.entries());
+      const { width = '100%', height = '100%', ...rest } = allParams;
+      const iframeSrc = `https://ijewel.design/embedded?${new URLSearchParams(rest ??  {}).toString()}`;
+
+      const frame = document.getElementById('viewerFrame');
+      frame.src = iframeSrc;
+      frame.style.width = width;
+      frame.style.height = height;
+    </script>
+  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "857f8f73a36e4090a3e4ee1728bf8e9b"}'></script><!-- Cloudflare Pages Analytics -->
+<a href="https://github.com/DDW-X" target="_blank" rel="noopener noreferrer" class="ddwx-watermark" id="ddwx-signature">
+  <span class="ddwx-dot"></span>
+  <span>Fully Reverse Engineered by DDW-X</span>
+</a>
+
+</body>
+</html>

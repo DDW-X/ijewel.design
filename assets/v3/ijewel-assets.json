@@ -1,0 +1,233 @@
+{
+  "presets": {
+    "Background": {
+      "basePath": "presets/background",
+      "assets": [
+        "bg-1.jpg",
+        "bg-2.png",
+        "bg-linear-antrasit.svg",
+        "bg-linear-beige.svg",
+        "bg-linear-gray.svg",
+        "bg-linear-lightblue.svg",
+        "bg-radial-antrasit.svg",
+        "bg-radial-aqua.svg",
+        "bg-radial-beige.svg",
+        "bg-radial-black.svg",
+        "bg-radial-blue.svg",
+        "bg-radial-coral.svg",
+        "bg-radial-darkblue.svg",
+        "bg-radial-fuchsia.svg",
+        "bg-radial-gray.svg",
+  
+        "bg-radial-green.svg;;premium",
+        "bg-radial-grey.svg;;premium",
+        "bg-radiallight-blue.svg;;premium",
+        "bg-radial-red.svg;;premium",
+        "bg-radial-white.svg;;premium"
+      ]
+    },
+    "Environment": {
+      "basePath": "presets/environment/metal",
+      "assets": [
+        "env-metal-001.hdr;.png",
+        "env-metal-002.exr;.png",
+        "env-metal-003.hdr;.png",
+        "env-metal-004.hdr;.png",
+        "env-metal-005.hdr;.png",
+        "env-metal-006.hdr;.png",
+        "env-metal-007.exr;.png",
+        "env-metal-008.exr;.png",
+        "env-metal-009.exr;.png",
+        "env-metal-010.exr;.png",
+  
+        "env-metal-014.hdr;.png;premium",
+        "env-metal-016.exr;.png;premium",
+        "env-metal-018.hdr;.png;premium",
+        "env-metal-019.hdr;.png;premium",
+        "env-metal-020.hdr;.png;premium"
+      ]
+    },
+    "GemEnvironment": {
+      "basePath": "presets/environment/gem",
+      "assets": [
+        "env-gem-001.exr;.png",
+        "env-gem-002.exr;.png",
+        "env-gem-003.hdr;.png",
+        "env-gem-004.exr;.png",
+        "env-gem-005.exr;.png",
+  
+        "env-gem-010.exr;.png;premium",
+        "env-gem-016.exr;.png;premium",
+        "env-gem-018.exr;.png;premium",
+        "env-gem-020.exr;.png;premium",
+        "env-gem-021.exr;.png;premium"
+      ]
+    },
+    "Ground": {
+      "basePath": "presets/ground",
+      "assets": [
+        "ground-ssrreflection.json;.png",
+        "ground-shadow-backleft.json;.png",
+        "ground-shadow-backright.json;.png",
+        "ground-shadow-frontleft.json;.png",
+        "ground-shadow-frontright.json;.png",
+        "ground-shadow-reflection.json;.png",
+        "ground-shadow-top.json;.png",
+        "ground-shadow-top1.json;.png",
+  
+        "ground-softshadow-backleft.json;.png;premium",
+        "ground-softshadow-backright.json;.png;premium",
+        "ground-softshadow-frontleft.json;.png;premium",
+        "ground-softshadow-frontright.json;.png;premium",
+        "ground-ssrreflection.json;.png;premium"
+      ]
+    },
+    "VJSON": {
+      "basePath": "presets/vjson",
+      "assets": [
+        "ss-001.vjson;.png",
+        "ss-002.vjson;.png",
+        "ss-003.vjson;.png",
+        "ss-004.vjson;.png",
+        "ss-005.vjson;.png",
+        "ss-006.vjson;.png",
+        "ss-007.vjson;.png",
+        "ss-008.vjson;.png",
+        "ss-009.vjson;.png",
+        "ss-010.vjson;.png",
+        "ss-011.vjson;.png",
+        "ss-012.vjson;.png",
+        "ss-013.vjson;.png",
+        "ss-014.vjson;.png",
+        "ss-015.vjson;.png",
+        "ss-016.vjson;.png",
+  
+        "ss-017.vjson;.png;premium",
+        "ss-018.vjson;.png;premium",
+        "ss-019.vjson;.png;premium",
+        "ss-020.vjson;.png;premium",
+        "ss-021.vjson;.png;premium"
+      ]
+    }
+  },
+  "materials": {
+    "metal": {
+      "basePath": "materials/metal",
+      "assets": [
+        "polished/metal-yellowgold-polished.pmat;.png",
+        "polished/metal-whitegold-polished.pmat;.png",
+        "polished/metal-rosegold-polished.pmat;.png",
+        "polished/metal-silver-polished.pmat;.png",
+        "polished/metal-blue-polished.pmat;.png",
+        "polished/metal-brown-polished.pmat;.png",
+        "polished/metal-darkblue-polished.pmat;.png",
+        "polished/metal-darkgreen-polished.pmat;.png",
+        "polished/metal-green2-polished.pmat;.png",
+        "polished/metal-green-polished.pmat;.png",
+        "polished/metal-grey-polished.pmat;.png",
+        "polished/metal-gun-polished.pmat;.png",
+        "polished/metal-lightblue-polished.pmat;.png",
+        "polished/metal-platinum-polished.pmat;.png",
+        "polished/metal-purple-polished.pmat;.png",
+        "polished/metal-red2-polished.pmat;.png",
+        "polished/metal-red-polished.pmat;.png",
+        "polished/metal-black-polished.pmat;.png",
+        "polished/metal-blue2-polished.pmat;.png",   
+        "matt/metal-blue-matt.pmat;.png",
+        "matt/metal-brown-matt.pmat;.png",
+        "matt/metal-red-matt.pmat;.png",
+        "matt/metal-rosegold-matt.pmat;.png",
+        "matt/metal-whitegold-matt.pmat;.png",
+        "matt/metal-yellowgold-matt.pmat;.png",
+        "matt/metal-black-matt.pmat;.png",
+  
+        "brushed/metal-yellowgold-brush.pmat;.png;premium",
+        "brushed/metal-rosegold-brush.pmat;.png;premium",
+        "brushed/metal-whitegold-brush.pmat;.png;premium",
+        "hammered/metal-rosegold-hammeredlinear.pmat;.png;premium",
+        "hammered/metal-whitegold-hammer.pmat;.png;premium",
+        "hammered/metal-whitegold-hammeredlinear.pmat;.png;premium",
+        "hammered/metal-yellowgold-hammer.pmat;.png;premium",
+        "hammered/metal-yellowgold-hammeredlinear.pmat;.png;premium",
+        "hammered/metal-rosegold-hammer.pmat;.png;premium",
+        "sand/metal-whitegold-sand.pmat;.png;premium",
+        "sand/metal-yellowgold-sand.pmat;.png;premium",
+        "sand/metal-rosegold-sand.pmat;.png;premium",
+        "scratch/metal-yellowgold-scratch.pmat;.png;premium",
+        "scratch/metal-rosegold-scratch.pmat;.png;premium",
+        "scratch/metal-whitegold-scratch.pmat;.png;premium",
+        "sparkle/metal-yellowgold-sparkle.pmat;.png;premium",
+        "sparkle/metal-rosegold-sparkle.pmat;.png;premium",
+        "sparkle/metal-whitegold-sparkle.pmat;.png;premium"
+      ]
+    },
+    "gem": {
+     "basePath": "materials/gem",
+      "assets": [
+        "gem-citrin-1.dmat;.png",
+        "gem-citrin-2.dmat;.png",
+        "gem-diamond-black.dmat;.png",
+        "gem-diamond-blue.dmat;.png",
+        "gem-diamond-brown.dmat;.png",
+        "gem-diamond-green.dmat;.png",
+        "gem-diamond-pink.dmat;.png",
+        "gem-diamond-white1.dmat;.png",
+        "gem-diamond-white2.dmat;.png",
+        "gem-diamond-yellow.dmat;.png",
+        "gem-emerald-1.dmat;.png",
+        "gem-gem-amethist.dmat;.png",
+        "gem-morganit.dmat;.png",
+        "gem-peridot.dmat;.png",
+        "gem-rhodolite-garnet.dmat;.png",
+        "gem-ruby-1.dmat;.png",
+        "gem-ruby-2.dmat;.png",
+        "gem-sapphire-1.dmat;.png",
+        "gem-sapphire-green.dmat;.png",
+        "gem-sapphire-pink.dmat;.png",
+        "gem-sapphire-yellow.dmat;.png",
+        "gem-smoky-quartz.dmat;.png",
+        "gem-tansanit.dmat;.png",
+        "gem-topas.dmat;.png",
+        "gem-tourmalin-green.dmat;.png",
+        "gem-tourmalin-rose.dmat;.png",
+        "gem-tsavorit.dmat;.png",
+  
+        "gem-zircon-blue.dmat;.png;premium",
+        "gem-zircon-brown.dmat;.png;premium",
+        "gem-zircon-cinnamon.dmat;.png;premium",
+        "gem-zircon-green.dmat;.png;premium",
+        "gem-zircon-red.dmat;.png;premium",
+        "gem-zircon-turquoise.dmat;.png;premium",
+        "gem-zircon-white.dmat;.png;premium",
+        "gem-zircon-yellow.dmat;.png;premium",
+        "gem-aquamarin.dmat;.png;premium",
+        "gem-citrin.dmat;.png;premium"
+      ]
+    },
+    "ceramic": {
+      "basePath": "materials/ceramic",
+      "assets": [
+        "ceramic-white.pmat;.png",
+        "ceramic-cyan.pmat;.png",
+        "ceramic-green.pmat;.png",
+  
+        "ceramic-red.pmat;.png;premium",
+        "ceramic-yellow.pmat;.png;premium",
+        "ceramic-black.pmat;.png;premium",
+        "ceramic-blue.pmat;.png;premium"
+      ]
+    },
+    "pearl": {
+      "basePath": "materials/pearl",
+      "assets": [
+        "pearl-white.pmat;.png",
+        "pearl-gold.pmat;.png",
+  
+        "pearl-mutt.pmat;.png;premium",
+        "pearl-rose.pmat;.png;premium",
+        "pearl-tahity.pmat;.png;premium"
+      ]
+    }
+  },
+  "version": "v3"
+}

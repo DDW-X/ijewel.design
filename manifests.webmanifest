@@ -1,0 +1,25 @@
+{
+  "name": "iJewel.Design",
+  "short_name": "iJewel",
+  "start_url": "https://ijewel.design",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Showcase your unique 3D jewelry designs  ",
+  "icons": [
+    {
+      "src": "/fav-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/fav-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

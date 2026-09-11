@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded Model by iJewel Design</title>
+    <meta name="description" content="Embedded Model by iJewel Design" />
+    <meta property="og:title" content="Embedded Model by iJewel Design" />
+    <meta property="og:description" content="Embedded Model by iJewel Design" />
+    <meta name="keywords" content="Embedded Model by iJewel Design" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="/images/3dconfigurator.webp" />
+    <link rel="canonical" href="https://ijewel.design" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1KSP9Y4Q3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-W1KSP9Y4Q3');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+    
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js',
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KK72HM9D');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+      /* Minified and consolidated CSS */
+      html,body{margin:0;padding:0;height:100%;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;overflow: hidden;}
+      *{box-sizing:border-box;}
+      .relative{position:relative;}
+      .absolute{position:absolute;}
+      .hidden{display:none;}
+      .w-screen{width:100dvw;}
+      .h-screen{height:100dvh;}
+      .w-full{width:100%;}
+      .h-full{height:100%;}
+      .flex{display:flex;}
+      .items-center{align-items:center;}
+      .object-contain{object-fit:contain;}
+      .object-cover{object-fit:cover;}
+      .overflow-hidden{overflow:hidden;}
+      .opacity-0{opacity:0;}
+      .center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+      .viewer-cover{position:absolute;top:0;left:0;width:100%;height:100%;transition:opacity 300ms ease-in;z-index:20;}
+      .viewer-container{width:100%;height:100%;transition:opacity 300ms ease-in;}
+      .cover-logo-container{height:40px;width:40px;border-radius:50px;background-color:#efefefcc;overflow:hidden;display:flex;align-items:center;position:relative;transition:width 600ms ease;cursor:pointer;box-sizing:border-box;perspective:1000px;}
+      .cover-logo-container.flip-hover.hovered{width:112px;}
+      .cover-logo-container.rotate-hover.hovered{width:148px;}
+      .logo-icon{position:absolute;width:40px;height:40px;padding:8px;box-sizing:border-box;transition:transform 600ms ease;}
+      .flip-hover .logo-icon.hovered{transform-style:preserve-3d;transform:rotateY(3.142rad);transition:transform 600ms ease;}
+      .rotate-hover .logo-icon.hovered{transition:transform 600ms ease;transform:translateY(-2px) rotate(45deg);}
+      .logo-text{height:40px;padding-left:40px;padding-right:6px; padding-top:8px;padding-bottom:8px;display:flex;align-items:center;}
+      .logo-text img{height:100%;object-fit:contain;}
+      .rotate-hover .logo-icon{padding: 11px;}
+      .loader{border:4px solid #f3f3f3;border-top:4px solid #3498db;border-radius:50%;width:40px;height:40px;animation:spin 1s linear infinite;}
+      @keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+      .viewer-header{position:absolute;top:0;left:0;width:100%;padding:23px 24px 18px 24px;justify-content:space-between;align-items:center;z-index:20;}
+      .user-info{display:flex;align-items:center;gap:10px;color:white;text-shadow:0px 0px 5px #00000099;text-decoration:none;}
+      .avatar{border-radius:50%;user-select:none;width:40px;height:40px;object-fit:cover;}
+      .avatar-fallback{width:40px;height:40px;border-radius:50%;background-color:#d4d4d8;display:flex;align-items:center;justify-content:center;font-size:18px;color:#555;}
+      .project-info h1{font-size:14px;font-weight:600;line-height:20px;margin:0;}
+      .project-info h3{font-size:12px;font-weight:400;line-height:16px;margin:0;}
+      .close-button{width:40px;height:40px;background-color:#efefefcc;border-radius:50%;align-items:center;justify-content:center;cursor:pointer;border:none;}
+      .close-icon{width:14px;height:14px;fill:#898989;}
+      @media(max-width:768px){.close-button{width:37px;height:37px;}.close-icon{width:14px;height:14px;}}
+      .play-button {position: absolute;top: 50%;left: 50%;margin-top: -50px;margin-left: -50px;display: flex;width: 100px;height: 100px;border: 0;border-radius: 50px;text-align: center;line-height: 100px;color: #fff;background-color: #6E72F2;outline: none;transition: all .15s }
+      .play-button .viewer-icon-play {display: block;position: absolute;left: 0;top: 0;font-size: 64px;}
+      .play-button .label {font-size:16px; width: 100px;font-weight: 700;color: #6E72F2;opacity: 1;transition: opacity .3s,transform .5s;transform: rotateY(360deg) }
+      .play-button:focus,.play-button:hover {box-shadow: 0 0 10px #333;transform: scale(1.1) }
+      .play-button:active .label,.play-button:active .label {opacity: 0;transform: rotateY(0) }
+      .play-button:active {background-color: #6E72F2;box-shadow: 0 0 10px #333;transform: scale(1) }
+    </style>
+    <!-- <script crossorigin src="https://dist.pixotronics.com/webgi/runtime/bundle-0.12.1.js" defer></script> -->
+    <!-- <script crossorigin src="https://releases.ijewel3d.com/libs/mini-viewer/0.3.24/bundle.iife.js" ></script> -->
+    <!-- <script crossorigin src="http://localhost:3000/html/bundle.iife.js" ></script> -->
+  <script data-cfasync="false" nonce="1e742883-b687-4485-8ff8-8a5aebb1a20e">try{(function(w,d){!function(W,X,Y,Z){if(W.zaraz)console.error("zaraz is loaded twice");else{W[Y]=W[Y]||{};W[Y].executed=[];W.zaraz={deferred:[],listeners:[]};W.zaraz._v="20";W.zaraz._n="1e742883-b687-4485-8ff8-8a5aebb1a20e";W.zaraz.q=[];W.zaraz._f=function($){return async function(){var ba=Array.prototype.slice.call(arguments);W.zaraz.q.push({m:$,a:ba})}};for(const bb of["track","set","debug"])W.zaraz[bb]=W.zaraz._f(bb);W.zaraz.init=()=>{var bc=X.getElementsByTagName(Z)[0],bd=X.createElement(Z),be=X.getElementsByTagName("title")[0];be&&(W[Y].t=X.getElementsByTagName("title")[0].text);W[Y].x=Math.random();W[Y].w=W.screen.width;W[Y].h=W.screen.height;W[Y].j=W.innerHeight;W[Y].e=W.innerWidth;W[Y].l=W.location.href;W[Y].r=X.referrer;W[Y].k=W.screen.colorDepth;W[Y].n=X.characterSet;W[Y].o=(new Date).getTimezoneOffset();if(W.dataLayer)for(const bf of Object.entries(Object.entries(dataLayer).reduce((bg,bh)=>({...bg[1],...bh[1]}),{})))zaraz.set(bf[0],bf[1],{scope:"page"});W[Y].q=[];for(;W.zaraz.q.length;){const bi=W.zaraz.q.shift();W[Y].q.push(bi)}bd.defer=!0;for(const bj of[localStorage,sessionStorage])Object.keys(bj||{}).filter(bl=>bl.startsWith("_zaraz_")).forEach(bk=>{try{W[Y]["z_"+bk.slice(7)]=JSON.parse(bj.getItem(bk))}catch{W[Y]["z_"+bk.slice(7)]=bj.getItem(bk)}});bd.referrerPolicy="origin";bd.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(W[Y])));bc.parentNode.insertBefore(bd,bc)};["complete","interactive"].includes(X.readyState)?zaraz.init():W.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async mU=>new Promise(mV=>{if(mU){mU.e&&mU.e.forEach(mW=>{try{const mX=d.querySelector("script[nonce]"),mY=mX?.nonce||mX?.getAttribute("nonce"),mZ=d.createElement("script");mY&&(mZ.nonce=mY);mZ.innerHTML=mW;mZ.onload=()=>{d.head.removeChild(mZ)};d.head.appendChild(mZ)}catch(m$){console.error(`Error executing script: ${mW}\n`,m$)}});Promise.allSettled((mU.f||[]).map(na=>fetch(na[0],na[1])))}mV()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script>
+<style id="ddwx-watermark-styles">
+  .ddwx-watermark {
+    position: fixed;
+    bottom: 18px;
+    right: 20px;
+    z-index: 999999;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 9999px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #4a4a4a;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease-in-out;
+    pointer-events: auto;
+  }
+  .ddwx-watermark:hover {
+    background: rgba(17, 24, 39, 0.9);
+    color: #ffffff;
+    border-color: rgba(17, 24, 39, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  .ddwx-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+  }
+</style>
+
+</head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK72HM9D" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <noscript>
+      <div style="text-align: center; padding: 20px;">
+        <h1>Embedded Model by iJewel Design</h1>
+        iJewel Embedding offers a seamless and user-friendly solution for integrating and showcasing your 3D models.
+      </div>
+    </noscript>
+    
+    <main class="w-screen h-screen relative">
+      <div id="viewerCover" class="viewer-cover relative overflow-hidden">
+        <div id="loaderCont" class="center">
+          <div id="loader" class="loader"></div>
+        </div>
+        <div id="playBtnContainer" class="center hidden">
+          <button id="playBtn" class="play-button" aria-label="Play 3D model">
+            <img src="../icons/play.svg" alt="Play" title="Play" class="viewer-icon-play" />
+            <span class="label">3D</span>
+          </button>
+        </div>
+
+        <img
+          src=""
+          id="poster"
+          title="3D jewelry Poster"
+          alt="3D jewelry Poster"
+          class="hidden w-full h-full object-cover overflow-hidden"
+        />
+
+        <div style="position: absolute; bottom: 22px; left: 22px">
+          <div id="coverLogo" class="cover-logo-container rotate-hover">
+            <span class="logo-icon" aria-label="Powered by iJewel3D">
+              <img class="w-full h-full object-contain"  src="../embed-design-icon.png" alt="Powered by iJewel3D" title="Powered by iJewel3D" />
+            </span>
+            <span class="logo-text" aria-label="Powered by iJewel3D">
+              <img  src="../embed-design-logo.png" alt="Powered by iJewel3D" title="Powered by iJewel3D" />
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="viewer-header hidden">
+        <a id="profileLink" href="#" target="_blank" rel="noreferrer" class="user-info">
+          <div id="avatarContainer">
+            </div>
+          <div class="project-info">
+            <h1 id="projectName"></h1>
+            <h3 id="ownerName"></h3>
+          </div>
+        </a>
+
+        <button class="close-button hidden">
+          <img src="../icons/close.svg" alt="Close" title="Close" />
+        </button>
+      </div>
+      <div id="viewerContainer" class="viewer-container w-full h-full">
+        <div class="w-full h-full relative">
+          <div id="webgi-canvas-container" class="w-full h-full" tabindex="0"></div>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Self-executing anonymous function for better scope management
+      (async () => {
+        // Centralized DOM element caching for performance
+        const DOMElements = {
+          loaderCont: document.getElementById('loaderCont'),
+          playBtnContainer: document.getElementById('playBtnContainer'),
+          playBtn: document.getElementById('playBtn'),
+          poster: document.getElementById('poster'),
+          viewerCover: document.getElementById('viewerCover'),
+          viewerContainer: document.getElementById('viewerContainer'),
+          coverLogo: document.getElementById('coverLogo'),
+          logoIcon: document.querySelector('#coverLogo .logo-icon'),
+          logoText: document.querySelector('#coverLogo .logo-text'),
+          projectName: document.getElementById('projectName'),
+          ownerName: document.getElementById('ownerName'),
+          profileLink: document.getElementById('profileLink'),
+          avatarContainer: document.getElementById('avatarContainer'),
+          viewerHeader: document.querySelector('.viewer-header'),
+          closeButton: document.querySelector('.close-button'),
+          webgiCanvasContainer: document.getElementById('webgi-canvas-container'),
+        };
+
+        // State management
+        const state = {
+          preview: true,
+          showCoverPlayButton: true,
+          startLoadingViewer: false,
+        };
+
+        const updateState = (key, value) => {
+          state[key] = value;
+          render();
+        };
+
+        const showLoading = () => DOMElements.loaderCont.classList.remove('hidden');
+        const hideLoading = () => DOMElements.loaderCont.classList.add('hidden');
+        const handleClose = () => handlePreview(true);
+
+        const handlePreview = (isShow = false) => {
+          updateState('preview', isShow);
+          updateState('showCoverPlayButton', isShow);
+        };
+
+        const render = () => {
+          DOMElements.viewerCover.style.display = state.preview ? 'block' : 'none';
+          DOMElements.playBtnContainer.style.display = state.showCoverPlayButton ? 'block' : 'none';
+          
+          if (state.preview) {
+            DOMElements.closeButton.classList.add('hidden');
+            DOMElements.closeButton.classList.remove('flex');
+            DOMElements.viewerContainer.classList.add('opacity-0');
+          } else {
+            DOMElements.closeButton.classList.remove('hidden');
+            DOMElements.closeButton.classList.add('flex');
+            DOMElements.viewerContainer.classList.remove('opacity-0');
+          }
+ 
+          if (state.startLoadingViewer && !window.ijewelEmbed?.viewer) {
+            window.dispatchEvent(new Event('load-ijewel-viewer'));
+          }
+        };
+
+        const fetchData = (url) => {
+          return fetch(url, { headers: { accept: '*/*' }, method: 'GET', mode: 'cors' }).then((r) => r.json());
+        };
+
+        const getBoolean = (obj, key) => {
+          const value = obj[key];
+          if (typeof value === 'boolean') return value;
+          switch (value) {
+            case 'true': return true;
+            case 'false': return false;
+            default: return value;
+          }
+        };
+
+        const defaultSetting = {
+          isTitle: true, isRemoveLogo: false, isRemoveLogoLink: false, isRemoveLoadingBgImg: true,
+          isShowPrompt: true, isTurntableAnimation: false, isAutoplay: false,
+          isTransparentBackground: false, isConfigurator: true, isEnabledZoom: true,
+          isShare: true, isShowModelInfo: false, isQuality: true, isResetView: true,
+          isRotateCamera: true, isPlayCameraViews: true, isPlayAnimations: true,
+          isFitObject: true, isFullScreen: true, isHighResPoster: false,
+        };
+
+        const getsettings = (searchParams, embedSettings = {}) => {
+          const settings = { ...defaultSetting, ...embedSettings, ...searchParams };
+          return {
+            viewer: {
+              isTransparentBackground: getBoolean(settings, 'isTransparentBackground'),
+              showCard: getBoolean(settings, 'isShowModelInfo'),
+              showShareButton: getBoolean(settings, 'isShare'),
+              showConfigurator: getBoolean(settings, 'isConfigurator'),
+              showZoomButtons: getBoolean(settings, 'isEnabledZoom'),
+              hideQuality: !getBoolean(settings, 'isQuality'),
+              hideRotateCamera: !getBoolean(settings, 'isRotateCamera'),
+              hideCameraViews: !getBoolean(settings, 'isPlayCameraViews'),
+              hideGltfAnimations: !getBoolean(settings, 'isPlayAnimations'),
+              hideFitScene: !getBoolean(settings, 'isFitObject'),
+              hideFullScreen: !getBoolean(settings, 'isFullScreen'),
+              showPosterInLoadingScreen: !getBoolean(settings, 'isRemoveLoadingBgImg'),
+              disableInteractionPrompt: !getBoolean(settings, 'isShowPrompt'),
+              runRotateCamera: getBoolean(settings, 'isTurntableAnimation'),
+              transparentBg: getBoolean(settings, 'isTransparentBackground'),
+            },
+            others: {
+              cameraConfig: getBoolean(settings, 'isResetView'),
+              isAutoplay: getBoolean(settings, 'isAutoplay'),
+              isTitle: getBoolean(settings, 'isTitle'),
+              isRemoveLogo: getBoolean(settings, 'isRemoveLogo'),
+              isRemoveLogoLink: getBoolean(settings, 'isRemoveLogoLink'),
+              isHighResPoster: getBoolean(settings, 'isHighResPoster'),
+            },
+          };
+        };
+
+        const getPosterOfProject = (settings, project)=>{
+          if (settings.others.isHighResPoster && project.project_data?.embedPosterUrl) {
+            return project.project_data.embedPosterUrl;
+          }
+          return project.poster_url;
+        };
+        
+        const canRemoveIjewelBranding = (profile) => {
+          if (!profile || !profile?.plan || !profile.created_at) return false;
+          if (profile.plan !== 'business') return false;
+          const creationDate = new Date(profile.created_at);
+          const cutoffDate = new Date('2025-08-01T00:00:00Z'); // Aug 01, 2025
+          return creationDate < cutoffDate;
+        };
+
+        const getEmbeddedLogo = (profile, settings, backlinkUrl) => {
+          const planName = profile?.plan;
+ 
+          let embedLogo = {
+            icon: '../embed-design-icon.png', logo : '../embed-design-logo.png', // icon: '../embed-diamond-icon.png', logo: '../embed-ijewel3d-logo.png',
+            url: backlinkUrl ?? 'https://ijewel.design', logoWidth: 148, iconAmimation: 'rotate', // logoWidth: 112, iconAmimation: 'flip',
+          }; // default logo as business plan
+
+          if (planName == 'business') {
+            if (settings.others.isRemoveLogoLink) embedLogo.url = null;
+            if (settings.others.isRemoveLogo && profile && canRemoveIjewelBranding(profile)) {
+              embedLogo.logo = null
+            }
+          }
+          
+          return embedLogo;
+        };
+
+        const updateHeadMetaTag = () => {
+          const { project } = window.ijewelEmbed;
+          if (project) {
+            const updateMeta = (selector, attribute, content) => {
+              const meta = document.querySelector(selector);
+              if (meta && content) meta.setAttribute(attribute, content);
+            };
+
+            const titleContent = `${project.name} by ${project.full_name ?? project.owner_username}`;
+            if (project.name) {
+              document.title = titleContent;
+              updateMeta('meta[property="og:title"]', 'content', titleContent);
+            }
+            if (project.description) {
+              updateMeta('meta[name="description"]', 'content', project.description);
+              updateMeta('meta[property="og:description"]', 'content', project.description);
+            }
+            const poster = project?.project_data?.embedPosterUrl || project.poster_url 
+            if (poster) {
+              updateMeta('meta[property="og:image"]', 'content', poster);
+              updateMeta('meta[name="twitter:image"]', 'content', poster);
+            }
+            if (project.slug) {
+              updateMeta('meta[property="og:url"]', 'content', `https://ijewel.design/project/${project.slug}`);
+            }
+          }
+        };
+
+        const loadScript = (src) => {
+          return new Promise((resolve, reject) => {
+            const existingScript = document.querySelector(`script[src="${src}"]`);
+            if (existingScript) {
+              resolve();
+              return;
+            }
+
+            const script = document.createElement('script');
+            script.src = src;
+            script.async = true;
+            script.onload = () => resolve();
+            script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+            document.body.appendChild(script);
+          });
+        };
+
+        const senitizeProject = (data) => {
+          const { project, profile } = data;
+          
+          const projectData = project.project_data;
+          const versionNumber = parseInt(projectData.version?.split('v')[1] || '0');
+          projectData.basePath = projectData.basePath || (versionNumber > 3 ? `https://packs.ijewel3d.com/files/` : `https://assets.ijewel.design/${projectData.version || 'v1'}/`);
+          projectData.name = project.name;
+          projectData.description = project.description;
+
+          if (profile) {
+            projectData.profileName = profile.full_name;
+            projectData.profileDescription = `@${profile.username}`;
+            projectData.profileImage = profile.avatar_url;
+            projectData.profileUrl = `https://ijewel.design/profile/${profile.username}`;
+          }
+          projectData.currentPose = projectData.currentPose || null;
+          return projectData;
+        }
+
+
+        const loadViewer = async() => {
+          const { project, profile, settings } = window.ijewelEmbed;
+          const embedLogo = window.ijewelEmbed?.embedLogo ?? getEmbeddedLogo({ plan:'business' }, settings);
+          const projectData = senitizeProject({ project, profile })
+
+          projectData.logo = project.project_data.logo ? project.project_data.logo : '../icons/idesign.svg';
+          if (!settings.others.cameraConfig) projectData.cameraConfig = null
+          
+          const option = {
+            ...settings.viewer,
+            showSwitchNode: true,
+            embedLogo: embedLogo,
+            shareUrl: embedLogo?.url,
+            viewer: window.ijewelEmbed?.viewer,
+            showProfile: true,
+            useIjewelLogo: false,
+            configuratorBottomOffsetPx: window.innerWidth < 768 ? 20 : 0,
+            brandingSettings: projectData?.brandingSettings ?? null,
+            hideTryOn: false
+          };
+
+          // Ensure ijewelViewer is loaded before instantiation.
+
+          if (typeof ijewelViewer !== 'undefined' && ijewelViewer.Viewer) {
+            window.ijewelViewerInstance = new ijewelViewer.Viewer(DOMElements.webgiCanvasContainer, projectData, option);
+            window.addEventListener('ijewel-viewer-ready', async (ev) => {
+              console.log('ijewel viewer ready');
+              const viewer = ev.detail.viewer;
+              window.ijewelEmbed = { ...window.ijewelEmbed, viewer: viewer };
+              handlePreview(false); // Hide preview immediately after load
+              hideLoading();
+
+              if (!projectData?.tryonConfig?.enabled) {
+                const viewerContainer = viewer.container;
+                if (viewerContainer) {
+                  const style = document.createElement('style');
+                  style.textContent = `#webgi-canvas-container > div > svg { display: none; }`;
+                  viewerContainer.appendChild(style);
+                }
+              }
+            });
+          } else {
+            console.error('ijewelViewer is not loaded.');
+          }
+        };
+
+        const loadHeader = () => {
+          const isTitle = window.ijewelEmbed?.settings?.others?.isTitle;
+          if (!isTitle) return;
+
+          const { project, profile } = window.ijewelEmbed;
+          const getEllipsisText = (text, maxLength) => text.length > maxLength ? `${text.slice(0, maxLength - 3)}...` : text;
+
+          DOMElements.projectName.textContent = getEllipsisText(project.name, 20);
+          DOMElements.ownerName.textContent = getEllipsisText(`by ${profile.full_name || profile.username}`, 20);
+          DOMElements.profileLink.href = `https://ijewel.design/profile/${profile.username}`;
+
+          // Clear previous avatar before injecting
+          DOMElements.avatarContainer.innerHTML = '';
+          if (profile.avatar_url) {
+            const img = document.createElement('img');
+            img.src = profile.avatar_url;
+            img.alt = `${profile.name || profile.username}, Profile Image`;
+            img.title = `${profile.name || profile.username}`;
+            img.className = 'avatar';
+            DOMElements.avatarContainer.appendChild(img);
+          } else {
+            const fallback = document.createElement('div');
+            fallback.className = 'avatar-fallback';
+            fallback.textContent = profile.name?.charAt(0).toUpperCase() || 'U';
+            DOMElements.avatarContainer.appendChild(fallback);
+          }
+
+          DOMElements.viewerHeader.classList.remove('hidden');
+          DOMElements.viewerHeader.classList.add('flex');
+        };
+
+        const loadCoverBranding = () => {
+          const embedLogo = window.ijewelEmbed?.embedLogo;
+
+          DOMElements.coverLogo.addEventListener('click', () => {
+            if (embedLogo.url) window.open(embedLogo.url, '_blank');
+          });
+
+          DOMElements.coverLogo.classList.toggle('rotate-hover', embedLogo.iconAmimation === 'rotate');
+          DOMElements.coverLogo.classList.toggle('flip-hover', embedLogo.iconAmimation !== 'rotate');
+
+          DOMElements.logoIcon.querySelector('img').src = embedLogo.icon ?? '';
+          DOMElements.logoText.querySelector('img').src = embedLogo.logo ?? '';
+          // DOMElements.logoText.classList.toggle('hidden', !embedLogo.logo);
+
+          let isHovered = false;
+          DOMElements.coverLogo.addEventListener('mouseenter', () => {
+            isHovered = true;
+            if(embedLogo.logo) DOMElements.coverLogo.classList.add('hovered');
+            DOMElements.logoIcon.classList.add('hovered');
+          });
+          DOMElements.coverLogo.addEventListener('mouseleave', () => {
+            isHovered = false;
+            DOMElements.coverLogo.classList.remove('hovered');
+            DOMElements.logoIcon.classList.remove('hovered');
+          });
+        };
+
+        // Main execution logic
+        showLoading();
+        const urlParams = new URLSearchParams(window.location.search);
+        const slug = urlParams.get('slug');
+        const allParams = Object.fromEntries(urlParams.entries());
+        if (!slug) {
+          console.error('No project slug provided.');
+          hideLoading();
+          DOMElements.viewerContainer.innerHTML = '<div>Error: No project slug found.</div>';
+          return;
+        }
+       
+        try {
+          const projectResponse = await fetchData(`https://api.ijewel.design/rest/v1/projects?select=*&slug=eq.${slug}`);
+          let project = projectResponse.length > 0 ? projectResponse[0] : null;
+
+          if (!project) {
+            console.error('No project found.');
+            hideLoading();
+            DOMElements.viewerContainer.innerHTML = '<div>Error: Project not found.</div>';
+            return;
+          }
+          
+          if (project.tags && project.tags.includes('_suppress')) {
+            hideLoading();
+            DOMElements.viewerContainer.innerHTML = '<div>Error: Project not found.</div>';
+            return;
+          }
+          const settings = getsettings(allParams, project.project_data?.embedSettings);
+          const poster = getPosterOfProject(settings, project)
+          if (poster) {
+            DOMElements.poster.src = poster;
+            DOMElements.poster.classList.remove('hidden');
+          }
+  
+          window.ijewelEmbed = { ...window.ijewelEmbed, project, settings }
+
+          const latest = 'https://dev-sandbox.pixotronics.com/webgi/version.txt';
+          const defaultWebgiVersion = '0.22.0'; // update here, the wegbi version of embedding.
+          const url = new URL(window.location.href);
+          let version = url.searchParams.get('v');
+          version = (version === 'latest' ? await fetch(latest).then((r) => r.text()) : version) || defaultWebgiVersion;
+          const webgiPath = `https://releases.ijewel3d.com/libs/webgi-v0/bundle-${version}.js`;
+          const viewerPath = 'https://releases.ijewel3d.com/libs/mini-viewer/0.6.19/bundle.nowebgi.iife.js'
+
+          await loadScript(webgiPath);
+          await loadScript(viewerPath);
+
+          if(!settings.others.isAutoplay) handlePreview(true); // Show play button ..etc
+          hideLoading();
+
+          const profileResponse = fetchData(`https://api.ijewel.design/rest/v1/profiles?select=*&username=eq.${project.owner_username}`).then(async (profileResp) => {
+            let profile = profileResp.length > 0 ? profileResp[0] : null;
+
+            if (!profile) {
+              console.error('No profile found.');
+              hideLoading();
+              DOMElements.viewerContainer.innerHTML = '<div>Error: Profile not found.</div>';
+              return;
+            }
+
+            window.ijewelEmbed = { ...window.ijewelEmbed, profile }
+            const embedLogo = getEmbeddedLogo(profile, settings);
+            window.ijewelEmbed = { ...window.ijewelEmbed, profile, embedLogo }
+
+            loadHeader()
+            loadCoverBranding();
+            updateHeadMetaTag();
+
+            if (window.ijewelViewerInstance) {
+              setTimeout(() => {
+                // This will update profile related information on the loaded viewer.
+                const isBusiness = profile.plan === 'business'
+                const projectData = senitizeProject({ project, profile })
+                const embedLogo = getEmbeddedLogo(profile, settings);
+
+
+                if (!isBusiness) projectData.logo = '../icons/idesign.svg'
+                if (!settings.others.cameraConfig) projectData.cameraConfig = null
+
+                if (typeof window.ijewelViewerInstance.viewerOptions === 'object') {
+                  window.ijewelViewerInstance.viewerOptions = {
+                    ...window.ijewelViewerInstance.viewerOptions,
+                    showCard: settings.viewer.showCard,
+                    embedLogo: embedLogo,
+                    // viewer: window.ijewelEmbed?.viewer,
+                  };
+                }
+                window.ijewelViewerInstance.render(projectData)
+              }, 100);
+            }
+          })
+
+          window.ijewelEmbed = {
+            ...window.ijewelEmbed,
+            viewer: null, // Initialize viewer as null
+          };
+          
+          // Event listener for loading viewer
+          window.addEventListener('load-ijewel-viewer', loadViewer, { once: true }); // Use { once: true } for single execution
+          
+          if (settings.others.isAutoplay) {
+            showLoading()
+            window.dispatchEvent(new Event('load-ijewel-viewer'));
+          }
+         
+        } catch (e) {
+          console.error('Error during data fetching or initialization:', e);
+          hideLoading();
+          DOMElements.viewerContainer.innerHTML = '<div>Error loading content. Please try again later.</div>';
+        }
+
+        DOMElements.playBtn.addEventListener('click', () => {
+          updateState('startLoadingViewer', true);
+          updateState('showCoverPlayButton', false);
+          if (window.ijewelEmbed.viewer) handlePreview(false);
+          else showLoading();
+        });
+
+        // Attach close button event listener
+        DOMElements.closeButton.addEventListener('click', handleClose);
+
+      })();
+    </script>
+  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "857f8f73a36e4090a3e4ee1728bf8e9b"}'></script><!-- Cloudflare Pages Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"a4ccba1d77e740e58d07ecba8b8bb930","r":1,"spa":2}' crossorigin="anonymous"></script>
+
+<a href="https://github.com/DDW-X" target="_blank" rel="noopener noreferrer" class="ddwx-watermark" id="ddwx-signature">
+  <span class="ddwx-dot"></span>
+  <span>Fully Reverse Engineered by DDW-X</span>
+</a>
+
+</body>
+</html>

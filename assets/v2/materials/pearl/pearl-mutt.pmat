@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "version": 4.6,
+    "type": "Material",
+    "generator": "Material.toJSON"
+  },
+  "uuid": "8d87b8c5-6dc6-4cd5-ae6a-ea07bb94de8c",
+  "type": "MeshStandardMaterial2",
+  "name": "dial",
+  "color": 7468287,
+  "roughness": 0.16,
+  "metalness": 1,
+  "sheen": 0,
+  "sheenColor": 0,
+  "sheenRoughness": 1,
+  "emissive": 16717546,
+  "emissiveIntensity": 0.02,
+  "specularIntensity": 1,
+  "specularColor": 16777215,
+  "clearcoat": 0,
+  "clearcoatRoughness": 0,
+  "iridescence": 0,
+  "iridescenceIOR": 1.3,
+  "iridescenceThicknessRange": [
+    100,
+    400
+  ],
+  "anisotropy": 0,
+  "anisotropyRotation": 0,
+  "map": "59a8d53c-586b-4680-a718-dba8dda798c7",
+  "envMapIntensity": 1,
+  "reflectivity": 0.7979165430046891,
+  "transmission": 0,
+  "thickness": 0,
+  "attenuationDistance": 0,
+  "attenuationColor": 16777215,
+  "side": 2,
+  "depthFunc": 3,
+  "depthTest": true,
+  "depthWrite": true,
+  "colorWrite": true,
+  "stencilWrite": false,
+  "stencilWriteMask": 255,
+  "stencilFunc": 519,
+  "stencilRef": 0,
+  "stencilFuncMask": 255,
+  "stencilFail": 7680,
+  "stencilZFail": 7680,
+  "stencilZPass": 7680,
+  "fog": false,
+  "userData": {
+    "_thinFilmLayer": {
+      "hasThinFilm": true,
+      "baseLayerFactors": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "noiseLayerFactors": [
+        0.7,
+        0.5,
+        0.9,
+        0.7
+      ],
+      "colorNoiseParams": [
+        0.5,
+        0.5,
+        0.5,
+        0.7
+      ],
+      "filmFactor": 0.0714908457
+    },
+    "gltfExtensions": {},
+    "uuid": "8d87b8c5-6dc6-4cd5-ae6a-ea07bb94de8c"
+  },
+  "textures": [
+    {
+      "metadata": {
+        "version": 4.6,
+        "type": "Texture",
+        "generator": "Texture.toJSON"
+      },
+      "uuid": "59a8d53c-586b-4680-a718-dba8dda798c7",
+      "name": "",
+      "image": "b980e833-b2d1-462d-89dd-8fdb7a91be4b",
+      "mapping": 300,
+      "channel": 0,
+      "repeat": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "center": [
+        0,
+        0
+      ],
+      "rotation": 0,
+      "wrap": [
+        1001,
+        1001
+      ],
+      "format": 1023,
+      "internalFormat": null,
+      "type": 1009,
+      "colorSpace": "srgb",
+      "encoding": 3001,
+      "minFilter": 1008,
+      "magFilter": 1006,
+      "anisotropy": 1,
+      "flipY": false,
+      "generateMipmaps": true,
+      "premultiplyAlpha": false,
+      "unpackAlignment": 4,
+      "userData": {
+        "rootPath": "https://playground.ijewel3d.com/assets/maps/albedo/pearl-mutt.jpg"
+      }
+    }
+  ],
+  "images": []
+}
